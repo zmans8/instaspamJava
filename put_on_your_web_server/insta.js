@@ -12,8 +12,8 @@ window.fbAsyncInit = function() {
     FB.init({
     // you must change the appId to the one you are given 
     // in your facebook account or it won't work! 
-	appId      : '584398054918567',                        // App ID from the app dashboard
-//	channelUrl : '//yourdomain.com/channel.php', // Channel file for x-domain comms
+	appId      : '1393344777550536',                        // App ID from the app dashboard
+	channelUrl : 'secret-garden-1248.herokuapp.com/channel.php', // Channel file for x-domain comms
 	status     : true,                                 // Check Facebook Login status
 	xfbml      : true                                  // Look for social plugins on the page
     });
@@ -91,7 +91,7 @@ function postToPHP(){
 // stream (look on the photos page of your profile...)
 function postToFB(img_url){
     console.log("posting to fb!");  
-    //    fbLogin(function(){
+        fbLogin(function(){
     console.log("Logged into facebook!");
     // login
     FB.api('/me/photos?access_token='+access_token, 'post', { 
